@@ -78,7 +78,7 @@ int main() {
 
 	FILE* workers_file = nullptr;
 
-	const char* path = R"(C:\Users\Evgeniy\Desktop\putfile.txt)";
+	const char* path = R"(C:\Users\Evgeniy\Desktop\putfile1.txt)";
 
 	FILE* enter_file = nullptr;
 
@@ -285,8 +285,7 @@ void find_employee(Employee*& worker, char* key, int size)
 			worker[i].print();
 			isEqual = false;
 		}
-		else
-			cout << "Сотрудник с такой фамилией не найден" << endl;
+
 	}
 	return;
 }
@@ -300,7 +299,7 @@ int read_from_file(Employee*& worker, int size, FILE* file)
 
 	fscanf_s(file, "%s", tmp_worker[size].firstname, sizeof(tmp_worker[size].firstname));
 	fscanf_s(file, "%s", &tmp_worker[size].lastname, sizeof(tmp_worker[size].lastname));
-	fscanf_s(file, "%d\n", &tmp_worker[size].age, sizeof(tmp_worker[size].age));
+	fscanf_s(file, "%d\n", &tmp_worker[size].age);
 
 
 	delete[] worker;

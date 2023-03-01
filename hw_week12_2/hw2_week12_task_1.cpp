@@ -1,8 +1,8 @@
-/*Написать перегруженные функции (int, double, char) для выполнения следующих задач:
- Инициализация квадратной матрицы;
- Вывод матрицы на экран;
- Определение максимального и минимального элемента на главной диагонали матрицы;
- Сортировка элементов по возрастанию отдельно для каждой строки матрицы.*/
+п»ї/*РќР°РїРёСЃР°С‚СЊ РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Рµ С„СѓРЅРєС†РёРё (int, double, char) РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ СЃР»РµРґСѓСЋС‰РёС… Р·Р°РґР°С‡:
+ РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹;
+ Р’С‹РІРѕРґ РјР°С‚СЂРёС†С‹ РЅР° СЌРєСЂР°РЅ;
+ РћРїСЂРµРґРµР»РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ Рё РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РЅР° РіР»Р°РІРЅРѕР№ РґРёР°РіРѕРЅР°Р»Рё РјР°С‚СЂРёС†С‹;
+ РЎРѕСЂС‚РёСЂРѕРІРєР° СЌР»РµРјРµРЅС‚РѕРІ РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ РѕС‚РґРµР»СЊРЅРѕ РґР»СЏ РєР°Р¶РґРѕР№ СЃС‚СЂРѕРєРё РјР°С‚СЂРёС†С‹.*/
 
 #include <iostream>
 #include <time.h>
@@ -37,7 +37,7 @@ void matrix_init(char mas[][5], int sz) { // char
 }
 
 void matrix_show(int mas[][5], int sz) { // int
-	cout << "Вывод матрицы int" << endl;
+	cout << "Р’С‹РІРѕРґ РјР°С‚СЂРёС†С‹ int" << endl;
 
 	for (int i = 0; i < sz; i++) {
 		for (int j = 0; j < sz; j++) {
@@ -50,7 +50,7 @@ void matrix_show(int mas[][5], int sz) { // int
 }
 
 void matrix_show(double mas[][5], int sz) { // double
-	cout << "Вывод матрицы double" << endl;
+	cout << "Р’С‹РІРѕРґ РјР°С‚СЂРёС†С‹ double" << endl;
 
 	for (int i = 0; i < sz; i++) {
 		for (int j = 0; j < sz; j++) {
@@ -63,7 +63,7 @@ void matrix_show(double mas[][5], int sz) { // double
 }
 
 void matrix_show(char mas[][5], int sz) { // char
-	cout << "Вывод матрицы char" << endl;
+	cout << "Р’С‹РІРѕРґ РјР°С‚СЂРёС†С‹ char" << endl;
 	for (int i = 0; i < sz; i++) {
 		for (int j = 0; j < sz; j++) {
 			cout << left << setw(3) << mas[i][j] << " ";
@@ -75,7 +75,7 @@ void matrix_show(char mas[][5], int sz) { // char
 }
 
 void matrix_glav_diag(int mas[][5], int sz) { // int
-	cout << "Вывод матрицы по диагонали int" << endl;
+	cout << "Р’С‹РІРѕРґ РјР°С‚СЂРёС†С‹ РїРѕ РґРёР°РіРѕРЅР°Р»Рё int" << endl;
 
 	int max = 0, min = mas[0][0];
 	for (int i = 0; i < sz; i++) {
@@ -89,12 +89,12 @@ void matrix_glav_diag(int mas[][5], int sz) { // int
 		}
 		cout << endl;
 	}
-	cout << "Минимальное число: " << min << " Максимальное число: " << max << endl << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ: " << min << " РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ: " << max << endl << endl;
 	return;
 }
 
 void matrix_glav_diag(double mas[][5], int sz) { // double
-	cout << "Вывод матрицы по диагонали double" << endl;
+	cout << "Р’С‹РІРѕРґ РјР°С‚СЂРёС†С‹ РїРѕ РґРёР°РіРѕРЅР°Р»Рё double" << endl;
 	double max = 0, min = mas[0][0];
 	for (int i = 0; i < sz; i++) {
 		for (int j = 0; j < sz; j++) {
@@ -107,12 +107,12 @@ void matrix_glav_diag(double mas[][5], int sz) { // double
 		}
 		cout << endl;
 	}
-	cout << "Минимальное число: " << min << " Максимальное число: " << max << endl << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ: " << min << " РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ: " << max << endl << endl;
 	return;
 }
 
 void matrix_glav_diag(char mas[][5], int sz) { // char
-	cout << "Вывод матрицы по диагонали char" << endl;
+	cout << "Р’С‹РІРѕРґ РјР°С‚СЂРёС†С‹ РїРѕ РґРёР°РіРѕРЅР°Р»Рё char" << endl;
 	char max = 0, min = mas[0][0];
 	for (int i = 0; i < sz; i++) {
 		for (int j = 0; j < sz; j++) {
@@ -125,7 +125,7 @@ void matrix_glav_diag(char mas[][5], int sz) { // char
 		}
 		cout << endl;
 	}
-	cout << "Минимальный символ: "  << min << " Максимальный символ: " << max << endl << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅС‹Р№ СЃРёРјРІРѕР»: "  << min << " РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЃРёРјРІРѕР»: " << max << endl << endl;
 	return;
 }
 
