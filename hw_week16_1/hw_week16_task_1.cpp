@@ -1,27 +1,27 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <windows.h>
 #include <string>
 #include <charconv>
 using namespace std;
 
 
-/*функция сравнивает две строки, и , если строки равны 
-возвращает 0, если первая строка больше второй, то возвращает 1, иначе –1.*/
+/*С„СѓРЅРєС†РёСЏ СЃСЂР°РІРЅРёРІР°РµС‚ РґРІРµ СЃС‚СЂРѕРєРё, Рё , РµСЃР»Рё СЃС‚СЂРѕРєРё СЂР°РІРЅС‹ 
+РІРѕР·РІСЂР°С‰Р°РµС‚ 0, РµСЃР»Рё РїРµСЂРІР°СЏ СЃС‚СЂРѕРєР° Р±РѕР»СЊС€Рµ РІС‚РѕСЂРѕР№, С‚Рѕ РІРѕР·РІСЂР°С‰Р°РµС‚ 1, РёРЅР°С‡Рµ -1.*/
 int mystrcmp(const char* str1, const char* str2);
 
-/*функция конвертирует строку в число и возвращает это число*/
+/*С„СѓРЅРєС†РёСЏ РєРѕРЅРІРµСЂС‚РёСЂСѓРµС‚ СЃС‚СЂРѕРєСѓ РІ С‡РёСЃР»Рѕ Рё РІРѕР·РІСЂР°С‰Р°РµС‚ СЌС‚Рѕ С‡РёСЃР»Рѕ*/
 int StringToNumber(char* str);
 
-/*функция конвертирует число в строку и возвращает указатель на эту строку*/
+/*С„СѓРЅРєС†РёСЏ РєРѕРЅРІРµСЂС‚РёСЂСѓРµС‚ С‡РёСЃР»Рѕ РІ СЃС‚СЂРѕРєСѓ Рё РІРѕР·РІСЂР°С‰Р°РµС‚ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° СЌС‚Сѓ СЃС‚СЂРѕРєСѓ*/
 char* NumberToString(int number);
 
-/*функция преобразует строку в верхний регистр*/
+/*С„СѓРЅРєС†РёСЏ РїСЂРµРѕР±СЂР°Р·СѓРµС‚ СЃС‚СЂРѕРєСѓ РІ РІРµСЂС…РЅРёР№ СЂРµРіРёСЃС‚СЂ*/
 char* Uppercase(char* str1);
 
-/*функция преобразует строку в нижний регистр*/
+/*С„СѓРЅРєС†РёСЏ РїСЂРµРѕР±СЂР°Р·СѓРµС‚ СЃС‚СЂРѕРєСѓ РІ РЅРёР¶РЅРёР№ СЂРµРіРёСЃС‚СЂ*/
 char* Lowercase(char* str1);
 
-/*функция реверсирует строку и возвращает указатель на новую строку*/
+/*С„СѓРЅРєС†РёСЏ СЂРµРІРµСЂСЃРёСЂСѓРµС‚ СЃС‚СЂРѕРєСѓ Рё РІРѕР·РІСЂР°С‰Р°РµС‚ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅРѕРІСѓСЋ СЃС‚СЂРѕРєСѓ*/
 char* mystrrev(char* str);
 
 
@@ -29,46 +29,46 @@ int main() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	cout << "1. Реализация mystrcmp" << endl;
+	cout << "1. Р РµР°Р»РёР·Р°С†РёСЏ mystrcmp" << endl;
 	char str11[] = { "test1" };
 	char str22[] = { "test2" };
 	char str33[] = { "test12" };
 
-	cout << "если " << str11 << " == " << str22 << " = 0 || Результат = " << mystrcmp(str11, str22) << endl;
-	cout << "если " << str33 << " > " << str22 << " = 1 || Результат = " << mystrcmp(str33, str11) << endl;
-	cout << "если " << str11 << " < " << str33 << " = -1 || Результат = " << mystrcmp(str11, str33) << endl << endl;
+	cout << "РµСЃР»Рё " << str11 << " == " << str22 << " = 0 || Р РµР·СѓР»СЊС‚Р°С‚ = " << mystrcmp(str11, str22) << endl;
+	cout << "РµСЃР»Рё " << str33 << " > " << str22 << " = 1 || Р РµР·СѓР»СЊС‚Р°С‚ = " << mystrcmp(str33, str11) << endl;
+	cout << "РµСЃР»Рё " << str11 << " < " << str33 << " = -1 || Р РµР·СѓР»СЊС‚Р°С‚ = " << mystrcmp(str11, str33) << endl << endl;
 
 
-	cout << "2. Реализация StringToNumber" << endl;
+	cout << "2. Р РµР°Р»РёР·Р°С†РёСЏ StringToNumber" << endl;
 	char str[] = { "43" };
 	cout << "char " << str << " (" << &str << ")";
 	int num = StringToNumber(str);
 	cout << " = int " << num << " (" << &num << ")" << endl << endl;
 
 
-	cout << "3. Реализация NumberToString" << endl;
+	cout << "3. Р РµР°Р»РёР·Р°С†РёСЏ NumberToString" << endl;
 	int num1 = 32;
 	cout << "int " << num1 << " (" << &num1 << ")";
 	char* p_str1 = NumberToString(num1);
 	cout << " = char* " << p_str1 << " (" << &p_str1 << ")" << endl << endl;
 
 
-	cout << "4.Реализация Uppercase" << endl;
-	char str2[] = {"абвгдЕЖзк"};
+	cout << "4.Р РµР°Р»РёР·Р°С†РёСЏ Uppercase" << endl;
+	char str2[] = {"Р°Р±Р«РІРіРґ"};
 	cout << "char " << str2 << " (" << &str2 << ")";
 	char* p_str2 = Uppercase(str2);
 	cout << " = char* " << p_str2 << " (" << &p_str2 << ")" << endl << endl;
 
 
-	cout << "5. Реализация Lowercase" << endl;
-	char str3[] = { "АБВГДежЗк" };
+	cout << "5. Р РµР°Р»РёР·Р°С†РёСЏ Lowercase" << endl;
+	char str3[] = { "РђР‘Р’Р“Р”РІС‹С„" };
 	cout << "char " << str3 << " (" << &str3 << ")";
 	char* p_str3 = Lowercase(str3);
 	cout << " = char* " << p_str3 << " (" << &p_str3 << ")" << endl << endl;
 
 
-	cout << "6. Реализация mystrrev" << endl;
-	char str4[] = { "парадигма12" };
+	cout << "6. Р РµР°Р»РёР·Р°С†РёВ¤ mystrrev" << endl;
+	char str4[] = { "РїР°СЂР°РґРёРіРјР°12" };
 	cout << "char " << str4 << " (" << &str4 << ")";
 	char* p_str4 = mystrrev(str4);
 	cout << " = char* " << p_str4 << " (" << &p_str4 << ")" << endl << endl;
@@ -128,8 +128,8 @@ char* NumberToString(int number)
 char* Uppercase(char* str1) 
 {
 	for (int i = 0; i < strlen(str1); i++) {
-		if (str1[i] >= 'а' && str1[i] <= 'я')
-			str1[i] = (char)('А' + (str1[i] - 'а'));
+		if (str1[i] >= 'Р°' && str1[i] <= 'В¤')
+			str1[i] = (char)('С' + (str1[i] - 'Р°'));
 	}
 
 	return str1;
@@ -138,8 +138,8 @@ char* Uppercase(char* str1)
 char* Lowercase(char* str1) 
 {
 	for (int i = 0; i < strlen(str1); i++) {
-		if (str1[i] >= 'А' && str1[i] <= 'Я')
-			str1[i] = (char)('а' + (str1[i] - 'А'));
+		if (str1[i] >= 'С' && str1[i] <= 'СЏ')
+			str1[i] = (char)('Р°' + (str1[i] - 'С'));
 	}
 	return str1;
 }
